@@ -883,8 +883,29 @@
     });
   }
 
+  /* ---------- Contador "+40 anos" ---------- */
+  function initCounters() {
+    var els = document.querySelectorAll(".count[data-to]");
+    if (!els.length || reduceMotion || !("IntersectionObserver" in window)) return;
+    els.forEach(function (el) {
+      var to = +el.getAttribute("data-to");
+      el.textContent = "0";
+      var io = new IntersectionObserver(function (entries) {
+        if (!entries[0].isIntersecting) return;
+        io.disconnect();
+        var t0 = performance.now(), dur = 1600;
+        (function step(now) {
+          var p = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.round(to * e);
+          if (p < 1) requestAnimationFrame(step);
+        })(t0);
+      }, { threshold: 0.6 });
+      io.observe(el);
+    });
+  }
+
   function init() {
-    var steps = [initSimulator, initXray, initTypes, initDiagnosis, initMyths, initParticles, initScroll, initMenu, initSmoothScroll, initActiveLink, initCardGlow];
+    var steps = [initSimulator, initXray, initTypes, initDiagnosis, initMyths, initParticles, initScroll, initMenu, initSmoothScroll, initActiveLink, initCardGlow, initCounters];
     steps.forEach(function (fn) {
       try { fn(); } catch (err) { if (window.console) console.error("[mecfupi]", fn.name, err); }
     });

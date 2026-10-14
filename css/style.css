@@ -153,7 +153,7 @@ html { scrollbar-color: #2a2a35 var(--bg); scrollbar-width: thin; }
 .logo-icon { width: 36px; height: 36px; color: var(--red); transition: transform .8s var(--ease); }
 .logo:hover .logo-icon { transform: rotate(180deg); }
 .logo-text { font-family: var(--font-title); font-weight: 900; font-size: 1.45rem; letter-spacing: .06em; line-height: 1; display: flex; flex-direction: column; }
-.logo-text small { font-weight: 600; font-size: .58rem; letter-spacing: .22em; color: var(--metal); text-transform: uppercase; margin-top: 4px; }
+.logo-text small { font-weight: 600; font-size: .56rem; letter-spacing: .2em; color: var(--metal); text-transform: uppercase; margin-bottom: 4px; }
 
 .hamburger {
   width: 46px; height: 46px; border-radius: 12px;
@@ -402,6 +402,26 @@ body.menu-open { overflow: hidden; }
 .mouse { display: block; width: 26px; height: 42px; border: 2px solid var(--metal); border-radius: 14px; position: relative; }
 .wheel { position: absolute; left: 50%; top: 8px; width: 4px; height: 8px; margin-left: -2px; border-radius: 2px; background: var(--red); animation: wheel 1.8s infinite; }
 @keyframes wheel { 0% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; transform: translateY(14px); } }
+
+/* ---------- Credenciais ---------- */
+.trust { position: relative; z-index: 2; padding: 36px 0 48px; background: linear-gradient(180deg, var(--bg), #0d0d14); }
+.trust-grid { display: grid; gap: 14px; grid-template-columns: 1fr; }
+.trust-item {
+  display: flex; align-items: center; gap: 16px; padding: 20px 22px; border-radius: var(--radius);
+  background: linear-gradient(145deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .015));
+  border: 1px solid var(--glass-border);
+  transition: transform .4s var(--ease), border-color .3s, box-shadow .4s var(--ease);
+}
+.trust-item:hover { transform: translateY(-4px); border-color: rgba(230, 57, 70, .4); box-shadow: 0 20px 40px -24px var(--red-glow); }
+.trust-item.is-done { transition: transform .4s var(--ease), border-color .3s, box-shadow .4s var(--ease), opacity .9s; }
+.trust-main { background: radial-gradient(circle at 0% 0%, rgba(230, 57, 70, .35), transparent 70%), linear-gradient(135deg, rgba(230, 57, 70, .18), rgba(230, 57, 70, .04)); border-color: rgba(230, 57, 70, .45); }
+.trust-num { display: flex; align-items: flex-start; flex-shrink: 0; font-family: var(--font-title); font-weight: 900; font-size: 4.2rem; line-height: .85; color: #fff; text-shadow: 0 0 30px var(--red-glow); font-variant-numeric: tabular-nums; }
+.trust-num .plus { color: var(--red); font-size: .55em; margin: .08em 2px 0 0; }
+.trust-icon { width: 54px; height: 54px; border-radius: 14px; flex-shrink: 0; display: grid; place-items: center; background: rgba(230, 57, 70, .14); border: 1px solid rgba(230, 57, 70, .3); color: var(--red); }
+.trust-icon svg { width: 27px; height: 27px; }
+.trust-label { display: flex; flex-direction: column; font-size: .88rem; line-height: 1.4; color: var(--metal); }
+.trust-label b { font-family: var(--font-title); font-weight: 800; font-size: 1.15rem; line-height: 1.2; color: var(--white); margin-bottom: 3px; }
+.trust-main .trust-label b { font-size: 1.4rem; text-transform: uppercase; letter-spacing: .04em; }
 
 /* ---------- Faixa (marquee) ---------- */
 .marquee {
@@ -778,6 +798,8 @@ body.menu-open { overflow: hidden; }
    Breakpoints
    ========================================================= */
 @media (min-width: 560px) {
+  .trust-grid { grid-template-columns: 1fr 1fr; }
+  .trust-main { grid-column: 1 / -1; }
   .hero-actions { flex-direction: row; justify-content: center; }
   .products-grid { grid-template-columns: repeat(2, 1fr); }
   .myths { grid-template-columns: repeat(2, 1fr); }
@@ -827,6 +849,8 @@ body.menu-open { overflow: hidden; }
   .hero-actions, .hero-badges { justify-content: flex-start; }
 
   .products-grid { grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .trust-grid { grid-template-columns: 1.25fr 1fr 1fr 1fr; }
+  .trust-main { grid-column: auto; }
   .xray { grid-template-columns: 1.7fr 1fr; align-items: stretch; }
   .about-grid { grid-template-columns: 1fr 1.05fr; gap: 72px; }
   .about-card { right: -24px; bottom: -28px; }
@@ -906,7 +930,8 @@ html.intro-on .intro {
   padding-left: .22em;
   animation: introIn .6s var(--ease) .15s both;
 }
-.intro-brand small { font-weight: 600; font-size: .26em; letter-spacing: .5em; color: var(--metal); margin-top: 10px; }
+.intro-brand small { font-weight: 600; font-size: .26em; letter-spacing: .45em; color: var(--metal); margin-bottom: 12px; text-transform: uppercase; }
+.intro-brand em { font-style: normal; font-family: var(--font-cond); font-weight: 700; font-size: .24em; letter-spacing: .18em; color: var(--red); margin-top: 14px; text-transform: uppercase; }
 
 .intro-gears { display: flex; gap: 10px; animation: introIn .5s var(--ease) .3s both; }
 .intro-gears li {
