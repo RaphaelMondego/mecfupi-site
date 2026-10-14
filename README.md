@@ -10,20 +10,15 @@ Site de página única da **Mecfupi do Brasil**, oficina especializada exclusiva
 - **Telefone/WhatsApp:** (11) 99824-9580 — https://wa.me/5511998249580
 - **Google Maps:** https://www.google.com/maps/search/Mecfupi+do+Brasil,+Rua+Diogo+Cabrera,+254,+Imirim,+São+Paulo,+SP
 
-## Tecnologia
+## Destaques
 
-HTML, CSS e JavaScript puros: sem frameworks, sem build, sem dependências.
-
-- Engrenagens 3D interligadas no hero feitas só com CSS (`transform-style: preserve-3d` + `@keyframes`), com velocidades proporcionais ao número de dentes para o engrenamento ficar realista
-- Partículas (faíscas) em `<canvas>` e efeito glitch sutil no título
-- Barra de progresso de scroll no topo
-- Animações de entrada com `IntersectionObserver` (fade-in, slide-up, slide-left, slide-right)
-- Navbar fixa que ganha fundo com blur ao rolar, menu hambúrguer no mobile
-- Botão "voltar ao topo" e botão flutuante de WhatsApp
-- Glassmorphism, gradientes e efeitos de hover
-- Mobile-first, `loading="lazy"` nas imagens, SEO, Open Graph e dados estruturados (Schema.org `AutoRepair`)
-- Respeita `prefers-reduced-motion`
-
+- **Simulador de câmbio no hero:** alavanca P-R-N-D, conjunto planetário (solar, satélites, coroa) com cinemática real pela equação de Willis, conta-giros, velocímetro e trocas de marcha automáticas ao segurar o acelerador. Abre em modo demonstração e passa o controle ao visitante no primeiro toque. Bloqueia P/R com o carro andando, como um câmbio de verdade.
+- **Raio-X do câmbio:** desenho técnico (blueprint) com 9 pontos clicáveis (conversor, bomba, embreagens, planetários, corpo de válvulas, solenoides, módulo TCM, trava P, óleo ATF), com função e sinais de defeito de cada um
+- **Tipos de câmbio:** abas com animações de automático convencional, CVT (polias variáveis) e dupla embreagem (marchas pré-selecionadas)
+- **Pré-diagnóstico online:** o visitante marca sintomas e informa o carro, recebe um nível de atenção e envia tudo pronto pelo WhatsApp
+- **Mitos x verdades:** cards que viram com cuidados reais de uso do câmbio automático
+- Indicador de marcha que acompanha o scroll, barra de progresso, partículas, glitch, glassmorphism, animações de entrada com IntersectionObserver
+- HTML, CSS e JS puros, sem frameworks e sem build. Mobile-first, SEO, Open Graph, dados estruturados (), acessibilidade e 
 ## Estrutura
 
 ```

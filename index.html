@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mecfupi do Brasil | Especialista em Câmbio Automático no Imirim - São Paulo</title>
-  <meta name="description" content="Mecfupi do Brasil: mão de obra especializada exclusivamente em câmbio automático. Diagnóstico, retífica e manutenção de câmbios automáticos de todas as montadoras e linhas. Imirim, Zona Norte de São Paulo. WhatsApp (11) 99824-9580.">
-  <meta name="keywords" content="câmbio automático, conserto de câmbio automático, retífica de câmbio automático, troca de óleo de câmbio automático, câmbio CVT, câmbio dupla embreagem, especialista em câmbio automático, Imirim, Zona Norte, São Paulo, Mecfupi">
+  <meta name="description" content="Mecfupi do Brasil: mão de obra especializada exclusivamente em câmbio automático (convencional, CVT e dupla embreagem), todas as montadoras e linhas. Faça o pré-diagnóstico online e fale no WhatsApp (11) 99824-9580. Imirim, São Paulo.">
+  <meta name="keywords" content="câmbio automático, conserto de câmbio automático, retífica de câmbio automático, troca de óleo de câmbio automático, câmbio CVT, câmbio dupla embreagem, câmbio dando tranco, câmbio patinando, especialista em câmbio automático, Imirim, Zona Norte, São Paulo, Mecfupi">
   <meta name="author" content="Mecfupi do Brasil">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0a0a0f">
@@ -16,7 +16,7 @@
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Mecfupi do Brasil">
   <meta property="og:title" content="Mecfupi do Brasil | Especialista em Câmbio Automático">
-  <meta property="og:description" content="Mão de obra especializada só em câmbio automático. Todas as montadoras, todas as linhas. Imirim, São Paulo. Chame no WhatsApp!">
+  <meta property="og:description" content="Só câmbio automático, todas as montadoras. Veja o câmbio funcionando por dentro e faça o pré-diagnóstico online. Imirim, São Paulo.">
   <meta property="og:url" content="https://raphaelmondego.github.io/mecfupi-site/">
   <meta property="og:image" content="https://raphaelmondego.github.io/mecfupi-site/img/cambio-aisin-corte.jpg">
   <meta property="og:image:width" content="1280">
@@ -26,14 +26,14 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Mecfupi do Brasil | Especialista em Câmbio Automático">
-  <meta name="twitter:description" content="Mão de obra especializada só em câmbio automático, todas as montadoras. Imirim, São Paulo. WhatsApp (11) 99824-9580.">
+  <meta name="twitter:description" content="Só câmbio automático, todas as montadoras. Pré-diagnóstico online e atendimento pelo WhatsApp (11) 99824-9580.">
   <meta name="twitter:image" content="https://raphaelmondego.github.io/mecfupi-site/img/cambio-aisin-corte.jpg">
 
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0a0f'/%3E%3Cpath fill='%23e63946' d='M28 6h8l1.5 7.2a19 19 0 0 1 5.6 2.3l6.2-4 5.6 5.6-4 6.2a19 19 0 0 1 2.3 5.6L58 30.5v8l-7.2 1.5a19 19 0 0 1-2.3 5.6l4 6.2-5.6 5.6-6.2-4a19 19 0 0 1-5.6 2.3L33.6 63h-8l-1.5-7.2a19 19 0 0 1-5.6-2.3l-6.2 4-5.6-5.6 4-6.2a19 19 0 0 1-2.3-5.6L1.2 38.5v-8l7.2-1.5a19 19 0 0 1 2.3-5.6l-4-6.2 5.6-5.6 6.2 4a19 19 0 0 1 5.6-2.3z' transform='translate(2.4 -2.5) scale(.92)'/%3E%3Ccircle cx='32' cy='32' r='9' fill='%230a0a0f'/%3E%3C/svg%3E">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800;900&family=Barlow+Condensed:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 
   <script type="application/ld+json">
@@ -41,7 +41,7 @@
     "@context": "https://schema.org",
     "@type": "AutoRepair",
     "name": "Mecfupi do Brasil",
-    "description": "Mão de obra especializada exclusivamente em câmbio automático, para todas as montadoras e linhas.",
+    "description": "Mão de obra especializada exclusivamente em câmbio automático (convencional, CVT e dupla embreagem), para todas as montadoras e linhas.",
     "telephone": "+55-11-99824-9580",
     "image": "https://raphaelmondego.github.io/mecfupi-site/img/cambio-aisin-corte.jpg",
     "url": "https://raphaelmondego.github.io/mecfupi-site/",
@@ -66,6 +66,12 @@
   <!-- Barra de progresso de scroll -->
   <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
 
+  <!-- Indicador de marcha que acompanha o scroll -->
+  <div class="scroll-hud" id="scrollHud" aria-hidden="true">
+    <span class="hud-gear" id="hudGear">P</span>
+    <span class="hud-rpm"><span id="hudRpm">800</span> rpm</span>
+  </div>
+
   <!-- NAVBAR -->
   <header class="navbar" id="navbar">
     <div class="container nav-inner">
@@ -81,11 +87,11 @@
       <nav class="nav-menu" id="navMenu" aria-label="Menu principal">
         <ul>
           <li><a href="#inicio" class="nav-link active">Início</a></li>
-          <li><a href="#sobre" class="nav-link">Sobre</a></li>
           <li><a href="#servicos" class="nav-link">Serviços</a></li>
-          <li><a href="#galeria" class="nav-link">Galeria</a></li>
+          <li><a href="#raio-x" class="nav-link">Raio-X</a></li>
+          <li><a href="#diagnostico" class="nav-link">Pré-diagnóstico</a></li>
+          <li><a href="#mitos" class="nav-link">Mitos</a></li>
           <li><a href="#localizacao" class="nav-link">Localização</a></li>
-          <li><a href="#contato" class="nav-link">Contato</a></li>
         </ul>
         <a href="https://wa.me/5511998249580?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20preciso%20de%20um%20or%C3%A7amento%20para%20c%C3%A2mbio%20autom%C3%A1tico." class="btn btn-primary btn-sm nav-cta" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"/></svg>
@@ -96,7 +102,7 @@
   </header>
 
   <main id="conteudo">
-    <!-- HERO -->
+    <!-- HERO + SIMULADOR -->
     <section class="hero" id="inicio" aria-labelledby="hero-title">
       <div class="hero-bg" aria-hidden="true"></div>
       <canvas class="hero-particles" id="particles" aria-hidden="true"></canvas>
@@ -104,48 +110,478 @@
 
       <div class="container hero-inner">
         <div class="hero-content">
-          <span class="eyebrow reveal"><span class="pulse-dot"></span> Imirim · Zona Norte de São Paulo</span>
+          <span class="eyebrow reveal"><span class="pulse-dot"></span> Especialista em câmbio automático · Imirim, SP</span>
           <h1 id="hero-title" class="hero-title reveal" style="--d:120ms">
-            Especialista em<br>câmbio
-            <span class="glitch" data-text="automático.">automático.</span>
+            Engata o <span class="glitch" data-text="D.">D.</span><br>
+            <span class="hero-title-sub">A gente cuida do resto.</span>
           </h1>
           <p class="hero-text reveal" style="--d:240ms">
-            Mão de obra especializada <strong>exclusivamente em câmbios automáticos</strong>.
-            Atendemos <strong>todas as montadoras e todas as linhas</strong>, com diagnóstico preciso e serviço feito por quem só faz isso.
+            Mão de obra especializada <strong>só em câmbio automático</strong>: convencional, CVT e dupla embreagem,
+            de <strong>todas as montadoras e todas as linhas</strong>. Não fazemos mecânica geral. Fazemos uma coisa, e fazemos bem.
           </p>
           <div class="hero-actions reveal" style="--d:360ms">
             <a href="https://wa.me/5511998249580?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20preciso%20de%20um%20or%C3%A7amento%20para%20c%C3%A2mbio%20autom%C3%A1tico." class="btn btn-primary btn-lg" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"/></svg>
               Falar com o especialista
             </a>
-            <a href="#servicos" class="btn btn-ghost btn-lg">Ver serviços</a>
+            <a href="#diagnostico" class="btn btn-ghost btn-lg">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-scan"/></svg>
+              Pré-diagnóstico grátis
+            </a>
           </div>
           <ul class="hero-badges reveal" style="--d:480ms">
             <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"/></svg> 100% câmbio automático</li>
             <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"/></svg> Todas as montadoras</li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"/></svg> Mão de obra especializada</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"/></svg> Convencional, CVT e dupla embreagem</li>
           </ul>
         </div>
 
-        <!-- Engrenagens 3D em CSS puro -->
-        <div class="hero-visual" aria-hidden="true">
-          <div class="gear-stage">
-            <div class="gear-scene">
-              <div class="gear gear-a" data-teeth="16"><div class="gear-rotor"></div></div>
-              <div class="gear gear-b" data-teeth="10"><div class="gear-rotor"></div></div>
-              <div class="gear gear-c" data-teeth="8"><div class="gear-rotor"></div></div>
+        <!-- Simulador interativo de câmbio automático -->
+        <div class="sim-wrap reveal-right" style="--d:200ms">
+          <div class="sim glass" id="sim">
+            <div class="sim-head">
+              <div>
+                <span class="sim-tag"><span class="rec-dot"></span><span id="simModeTag">DEMONSTRAÇÃO</span></span>
+                <h2 class="sim-title">Veja seu câmbio por dentro. <span>Agora é com você.</span></h2>
+              </div>
             </div>
-            <div class="gear-glow"></div>
+
+            <div class="sim-body">
+              <div class="shifter" role="radiogroup" aria-label="Posição da alavanca do câmbio">
+                <span class="shifter-knob" id="shifterKnob" aria-hidden="true"></span>
+                <button type="button" class="shift-btn" role="radio" aria-checked="true" data-mode="P" aria-label="P, estacionamento">P</button>
+                <button type="button" class="shift-btn" role="radio" aria-checked="false" data-mode="R" aria-label="R, ré">R</button>
+                <button type="button" class="shift-btn" role="radio" aria-checked="false" data-mode="N" aria-label="N, neutro">N</button>
+                <button type="button" class="shift-btn" role="radio" aria-checked="false" data-mode="D" aria-label="D, drive">D</button>
+              </div>
+
+              <div class="sim-stage">
+                <svg id="planetary" class="planetary" viewBox="-160 -160 320 320" role="img" aria-label="Animação de um conjunto de engrenagens planetárias de câmbio automático"></svg>
+                <span class="lock-badge" id="lockBadge"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-lock"/></svg> <span id="lockText">Trava P</span></span>
+              </div>
+            </div>
+
+            <div class="cluster" aria-hidden="true">
+              <div class="c-block">
+                <span class="c-value c-gear" id="simGear">P</span>
+                <small>marcha</small>
+              </div>
+              <div class="c-tach">
+                <svg viewBox="0 0 200 120">
+                  <path class="tach-track" d="M 22 108 A 82 82 0 1 1 178 108" />
+                  <path class="tach-red" d="M 156.4 47.4 A 82 82 0 0 1 178 108" />
+                  <g id="tachTicks"></g>
+                  <line id="tachNeedle" class="tach-needle" x1="100" y1="82" x2="100" y2="24" />
+                  <circle cx="100" cy="82" r="6" class="tach-hub" />
+                  <text x="100" y="112" text-anchor="middle" class="tach-rpm" id="simRpm">800</text>
+                </svg>
+              </div>
+              <div class="c-block">
+                <span class="c-value" id="simSpeed">0</span>
+                <small>km/h</small>
+              </div>
+            </div>
+
+            <ul class="sim-legend">
+              <li class="lg-sun"><i></i>Solar <b id="stSun">girando</b></li>
+              <li class="lg-carrier"><i></i>Porta-satélites <b id="stCarrier">travado</b></li>
+              <li class="lg-ring"><i></i>Coroa <b id="stRing">livre</b></li>
+            </ul>
+
+            <p class="sim-status" id="simStatus" aria-live="polite">P · Estacionamento: a trava bloqueia o eixo de saída.</p>
+
+            <button type="button" class="pedal" id="pedal" aria-label="Acelerador: segure para acelerar">
+              <span class="pedal-fill" id="pedalFill"></span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-gauge"/></svg>
+              <span>Segure para acelerar</span>
+            </button>
+            <p class="sim-note">Ilustração didática e simplificada de um conjunto planetário, o coração do câmbio automático convencional.</p>
           </div>
         </div>
       </div>
 
-      <a href="#sobre" class="scroll-hint" aria-label="Rolar para a seção Sobre">
+      <a href="#servicos" class="scroll-hint" aria-label="Rolar para os serviços">
         <span class="mouse"><span class="wheel"></span></span>
       </a>
     </section>
 
-    <!-- SOBRE -->
+    <!-- FAIXA -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Câmbio automático</span><i></i><span>CVT</span><i></i><span>Dupla embreagem</span><i></i><span>Todas as montadoras</span><i></i><span>Diagnóstico</span><i></i><span>Retífica</span><i></i><span>Troca de óleo ATF</span><i></i><span>Corpo de válvulas</span><i></i><span>Conversor de torque</span><i></i>
+        <span>Câmbio automático</span><i></i><span>CVT</span><i></i><span>Dupla embreagem</span><i></i><span>Todas as montadoras</span><i></i><span>Diagnóstico</span><i></i><span>Retífica</span><i></i><span>Troca de óleo ATF</span><i></i><span>Corpo de válvulas</span><i></i><span>Conversor de torque</span><i></i>
+      </div>
+    </div>
+
+    <!-- SERVIÇOS -->
+    <section class="section" id="servicos" aria-labelledby="servicos-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">Serviços</span>
+          <h2 id="servicos-title" class="section-title">Uma especialidade. <span class="text-red">Todos os serviços dela.</span></h2>
+          <p class="section-sub">Mão de obra especializada em câmbio automático, do primeiro sintoma à retífica completa.</p>
+        </header>
+
+        <div class="products-grid">
+          <article class="product-card glass reveal" style="--d:0ms">
+            <span class="card-num">01</span>
+            <div class="product-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-scan"/></svg></div>
+            <h3>Diagnóstico</h3>
+            <p>Leitura de falhas por scanner, análise de funcionamento e teste de rodagem para achar a causa real do problema.</p>
+            <a href="https://wa.me/5511998249580?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20DIAGN%C3%93STICO%20do%20c%C3%A2mbio%20autom%C3%A1tico." target="_blank" rel="noopener" class="card-link" aria-label="Agendar diagnóstico pelo WhatsApp">Agendar <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="product-card glass reveal" style="--d:100ms">
+            <span class="card-num">02</span>
+            <div class="product-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-gear"/></svg></div>
+            <h3>Retífica de câmbio</h3>
+            <p>Desmontagem, revisão completa e remontagem do câmbio automático para devolver o funcionamento original.</p>
+            <a href="https://wa.me/5511998249580?text=Ol%C3%A1!%20Preciso%20de%20or%C3%A7amento%20para%20RET%C3%8DFICA%20de%20c%C3%A2mbio%20autom%C3%A1tico." target="_blank" rel="noopener" class="card-link" aria-label="Pedir orçamento de retífica pelo WhatsApp">Orçamento <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="product-card glass reveal" style="--d:200ms">
+            <span class="card-num">03</span>
+            <div class="product-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-drop"/></svg></div>
+            <h3>Troca de óleo do câmbio</h3>
+            <p>Troca do fluido ATF conforme a especificação de cada montadora, essencial para a vida útil do câmbio.</p>
+            <a href="https://wa.me/5511998249580?text=Ol%C3%A1!%20Quero%20fazer%20a%20TROCA%20DE%20%C3%93LEO%20do%20c%C3%A2mbio%20autom%C3%A1tico." target="_blank" rel="noopener" class="card-link" aria-label="Agendar troca de óleo do câmbio pelo WhatsApp">Agendar <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="product-card glass reveal" style="--d:0ms">
+            <span class="card-num">04</span>
+            <div class="product-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-circuit"/></svg></div>
+            <h3>Corpo de válvulas</h3>
+            <p>Reparo e limpeza do corpo de válvulas e dos solenoides, causa comum de trancos e trocas irregulares.</p>
+            <a href="https://wa.me/5511998249580?text=Ol%C3%A1!%20Meu%20c%C3%A2mbio%20autom%C3%A1tico%20est%C3%A1%20dando%20trancos." target="_blank" rel="noopener" class="card-link" aria-label="Falar sobre corpo de válvulas pelo WhatsApp">Consultar <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="product-card glass reveal" style="--d:100ms">
+            <span class="card-num">05</span>
+            <div class="product-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-fan"/></svg></div>
+            <h3>Conversor de torque</h3>
+            <p>Diagnóstico e reparo de trepidação, patinação e superaquecimento ligados ao conversor de torque.</p>
+            <a href="https://wa.me/5511998249580?text=Ol%C3%A1!%20Meu%20carro%20autom%C3%A1tico%20est%C3%A1%20trepidando%20ou%20patinando." target="_blank" rel="noopener" class="card-link" aria-label="Falar sobre conversor de torque pelo WhatsApp">Consultar <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="product-card glass reveal" style="--d:200ms">
+            <span class="card-num">06</span>
+            <div class="product-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-car"/></svg></div>
+            <h3>Todas as linhas</h3>
+            <p>Automáticos convencionais, CVT e dupla embreagem, em nacionais e importados de todas as montadoras.</p>
+            <a href="https://wa.me/5511998249580?text=Ol%C3%A1!%20Voc%C3%AAs%20atendem%20o%20c%C3%A2mbio%20autom%C3%A1tico%20do%20meu%20carro%3F" target="_blank" rel="noopener" class="card-link" aria-label="Consultar se atendemos seu veículo pelo WhatsApp">Consultar meu carro <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- RAIO-X -->
+    <section class="section section-alt" id="raio-x" aria-labelledby="raiox-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">Raio-X</span>
+          <h2 id="raiox-title" class="section-title">Abra o câmbio automático <span class="text-red">sem sujar a mão.</span></h2>
+          <p class="section-sub">Toque nos pontos vermelhos e descubra o que cada componente faz e quais sinais ele dá quando começa a falhar.</p>
+        </header>
+
+        <div class="xray reveal">
+          <div class="xray-board">
+            <div class="xray-canvas">
+            <svg class="xray-svg" id="xraySvg" viewBox="0 0 900 430" role="img" aria-label="Desenho técnico em corte de um câmbio automático">
+              <!-- carcaça -->
+              <path class="bp-housing" d="M48 120 Q48 58 128 58 L240 58 L256 92 L640 92 L668 128 L860 168 L860 252 L668 292 L640 328 L256 328 L240 362 L128 362 Q48 362 48 300 Z"/>
+              <line class="bp-axis" x1="18" y1="210" x2="884" y2="210"/>
+              <text class="bp-label" x="22" y="202">MOTOR</text>
+              <text class="bp-label" x="836" y="202">RODAS</text>
+
+              <!-- conversor de torque -->
+              <g class="bp-part" data-part="conversor">
+                <rect x="70" y="80" width="140" height="260" rx="66"/>
+                <path d="M95 120 Q140 160 95 200 M95 220 Q140 260 95 300 M185 120 Q140 160 185 200 M185 220 Q140 260 185 300"/>
+                <line x1="140" y1="96" x2="140" y2="324"/>
+                <text class="bp-tag" x="140" y="378" text-anchor="middle">CONVERSOR</text>
+              </g>
+
+              <!-- bomba de óleo -->
+              <g class="bp-part" data-part="bomba">
+                <rect x="222" y="116" width="30" height="188" rx="6"/>
+                <path d="M228 150 h18 M228 175 h18 M228 245 h18 M228 270 h18"/>
+                <text class="bp-tag" x="237" y="104" text-anchor="middle">BOMBA</text>
+              </g>
+
+              <!-- pacotes de embreagens -->
+              <g class="bp-part" data-part="embreagens">
+                <path d="M272 112 v84 M280 120 v76 M288 112 v84 M296 120 v76 M304 112 v84 M312 120 v76 M320 112 v84 M328 120 v76
+                         M272 224 v84 M280 224 v76 M288 224 v84 M296 224 v76 M304 224 v84 M312 224 v76 M320 224 v84 M328 224 v76"/>
+                <path d="M560 112 v84 M568 120 v76 M576 112 v84 M584 120 v76 M592 112 v84 M600 120 v76
+                         M560 224 v84 M568 224 v76 M576 224 v84 M584 224 v76 M592 224 v84 M600 224 v76"/>
+                <text class="bp-tag" x="300" y="104" text-anchor="middle">EMBREAGENS</text>
+              </g>
+
+              <!-- conjuntos planetários -->
+              <g class="bp-part" data-part="planetario">
+                <rect x="360" y="112" width="84" height="14" rx="3"/>
+                <rect x="360" y="294" width="84" height="14" rx="3"/>
+                <circle cx="402" cy="156" r="24"/><circle cx="402" cy="156" r="6"/>
+                <circle cx="402" cy="264" r="24"/><circle cx="402" cy="264" r="6"/>
+                <rect x="380" y="186" width="44" height="48" rx="6"/>
+                <rect x="462" y="112" width="76" height="14" rx="3"/>
+                <rect x="462" y="294" width="76" height="14" rx="3"/>
+                <circle cx="500" cy="156" r="22"/><circle cx="500" cy="156" r="5"/>
+                <circle cx="500" cy="264" r="22"/><circle cx="500" cy="264" r="5"/>
+                <rect x="480" y="188" width="40" height="44" rx="6"/>
+                <text class="bp-tag" x="450" y="104" text-anchor="middle">PLANETÁRIOS</text>
+              </g>
+
+              <!-- trava de estacionamento -->
+              <g class="bp-part" data-part="trava">
+                <circle cx="640" cy="210" r="30"/>
+                <path d="M640 180 v-8 M661 189 l6 -6 M670 210 h8 M661 231 l6 6 M640 240 v8 M619 231 l-6 6 M610 210 h-8 M619 189 l-6 -6"/>
+                <path d="M600 140 L652 168 L646 178 L596 152 Z"/>
+                <text class="bp-tag" x="610" y="130" text-anchor="middle">TRAVA P</text>
+              </g>
+
+              <!-- eixo de saída -->
+              <rect class="bp-shaft" x="672" y="198" width="196" height="24" rx="4"/>
+
+              <!-- corpo de válvulas -->
+              <g class="bp-part" data-part="valvulas">
+                <rect x="280" y="332" width="300" height="40" rx="5"/>
+                <path d="M292 342 h30 v20 h24 v-14 h36 v18 h28 v-22 h40"/>
+                <text class="bp-tag" x="286" y="390" text-anchor="start">CORPO DE VÁLVULAS</text>
+              </g>
+
+              <!-- solenoides -->
+              <g class="bp-part" data-part="solenoides">
+                <rect x="470" y="341" width="16" height="22" rx="3"/>
+                <rect x="492" y="341" width="16" height="22" rx="3"/>
+                <rect x="514" y="341" width="16" height="22" rx="3"/>
+                <rect x="536" y="341" width="16" height="22" rx="3"/>
+                <rect x="558" y="341" width="16" height="22" rx="3"/>
+                <text class="bp-tag" x="522" y="390" text-anchor="middle">SOLENOIDES</text>
+              </g>
+
+              <!-- óleo / cárter -->
+              <g class="bp-part" data-part="oleo">
+                <path d="M248 372 L262 406 L590 406 L604 372"/>
+                <path class="bp-fluid" d="M268 400 q12 -5 24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0"/>
+                <text class="bp-tag" x="426" y="424" text-anchor="middle">ÓLEO ATF</text>
+              </g>
+
+              <!-- módulo eletrônico -->
+              <g class="bp-part" data-part="modulo">
+                <rect x="690" y="330" width="86" height="54" rx="6"/>
+                <rect x="712" y="345" width="42" height="24" rx="3"/>
+                <path d="M700 330 v-8 M716 330 v-8 M732 330 v-8 M748 330 v-8 M764 330 v-8 M700 384 v8 M716 384 v8 M732 384 v8 M748 384 v8 M764 384 v8"/>
+                <path class="bp-wire" d="M690 357 C640 357 620 352 580 352"/>
+                <text class="bp-tag" x="733" y="410" text-anchor="middle">MÓDULO TCM</text>
+              </g>
+            </svg>
+
+            <!-- hotspots -->
+            <button type="button" class="hotspot" data-part="conversor" style="--x:15.5%;--y:30%" aria-label="Conversor de torque"></button>
+            <button type="button" class="hotspot" data-part="bomba" style="--x:26.3%;--y:62%" aria-label="Bomba de óleo"></button>
+            <button type="button" class="hotspot" data-part="embreagens" style="--x:33.4%;--y:33%" aria-label="Embreagens"></button>
+            <button type="button" class="hotspot" data-part="planetario" style="--x:44.7%;--y:36.3%" aria-label="Conjuntos planetários"></button>
+            <button type="button" class="hotspot" data-part="trava" style="--x:71.1%;--y:48.8%" aria-label="Trava de estacionamento"></button>
+            <button type="button" class="hotspot" data-part="valvulas" style="--x:36.7%;--y:81.9%" aria-label="Corpo de válvulas"></button>
+            <button type="button" class="hotspot" data-part="solenoides" style="--x:58%;--y:82.1%" aria-label="Solenoides"></button>
+            <button type="button" class="hotspot" data-part="oleo" style="--x:47%;--y:94.4%" aria-label="Óleo ATF"></button>
+            <button type="button" class="hotspot" data-part="modulo" style="--x:81.4%;--y:83%" aria-label="Módulo eletrônico do câmbio"></button>
+            </div>
+          </div>
+
+          <aside class="xray-panel glass" id="xrayPanel" aria-live="polite">
+            <div class="xray-panel-top">
+              <span class="xray-count" id="xrayCount">01 / 09</span>
+              <div class="xray-nav">
+                <button type="button" id="xrayPrev" aria-label="Componente anterior">←</button>
+                <button type="button" id="xrayNext" aria-label="Próximo componente">→</button>
+              </div>
+            </div>
+            <h3 id="xrayName">Conversor de torque</h3>
+            <p class="xray-what" id="xrayWhat"></p>
+            <h4>Sinais de problema</h4>
+            <ul class="xray-signs" id="xraySigns"></ul>
+            <a href="https://wa.me/5511998249580" class="btn btn-primary btn-sm" id="xrayCta" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"/></svg>
+              Sinto isso no meu carro
+            </a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIPOS -->
+    <section class="section" id="tipos" aria-labelledby="tipos-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">Todas as linhas</span>
+          <h2 id="tipos-title" class="section-title">Três tecnologias. <span class="text-red">Um especialista.</span></h2>
+          <p class="section-sub">Cada tipo de câmbio automático funciona de um jeito e pede cuidados diferentes. A gente conhece os três.</p>
+        </header>
+
+        <div class="types reveal">
+          <div class="types-tabs" role="tablist" aria-label="Tipos de câmbio automático">
+            <button type="button" role="tab" id="tab-conv" aria-controls="panel-conv" aria-selected="true" class="type-tab">Convencional</button>
+            <button type="button" role="tab" id="tab-cvt" aria-controls="panel-cvt" aria-selected="false" class="type-tab" tabindex="-1">CVT</button>
+            <button type="button" role="tab" id="tab-dct" aria-controls="panel-dct" aria-selected="false" class="type-tab" tabindex="-1">Dupla embreagem</button>
+          </div>
+
+          <div class="type-panel glass" role="tabpanel" id="panel-conv" aria-labelledby="tab-conv">
+            <div class="type-text">
+              <h3>Automático convencional <small>(hidramático)</small></h3>
+              <p>Usa <strong>conversor de torque</strong> no lugar da embreagem e <strong>conjuntos de engrenagens planetárias</strong> comandados por embreagens e freios hidráulicos. É o tipo mais tradicional: suave, robusto e muito comum em SUVs, sedãs e picapes.</p>
+              <ul class="type-facts">
+                <li><b>Como troca:</b> o corpo de válvulas direciona óleo sob pressão para travar ou soltar partes do conjunto planetário.</li>
+                <li><b>Cuidado-chave:</b> óleo ATF correto e no nível certo. Óleo velho está por trás de muitos trancos.</li>
+              </ul>
+            </div>
+            <div class="type-visual"><svg id="typeConv" viewBox="-160 -160 320 320" aria-hidden="true"></svg></div>
+          </div>
+
+          <div class="type-panel glass" role="tabpanel" id="panel-cvt" aria-labelledby="tab-cvt" hidden>
+            <div class="type-text">
+              <h3>CVT <small>(transmissão continuamente variável)</small></h3>
+              <p>Não tem marchas fixas: duas <strong>polias de diâmetro variável</strong> ligadas por uma correia ou corrente de aço mudam a relação de forma contínua. O resultado é uma aceleração sem "degraus" e econômica.</p>
+              <ul class="type-facts">
+                <li><b>Como troca:</b> as polias abrem e fecham, e a correia sobe ou desce nelas, variando a relação sem parar.</li>
+                <li><b>Cuidado-chave:</b> usa óleo próprio para CVT. Óleo errado ou vencido compromete correia e polias.</li>
+              </ul>
+              <p class="type-readout">Relação agora: <b id="cvtRatio">2,40 : 1</b></p>
+            </div>
+            <div class="type-visual"><svg id="typeCvt" viewBox="0 0 360 240" aria-hidden="true"></svg></div>
+          </div>
+
+          <div class="type-panel glass" role="tabpanel" id="panel-dct" aria-labelledby="tab-dct" hidden>
+            <div class="type-text">
+              <h3>Dupla embreagem <small>(DCT / DSG)</small></h3>
+              <p>São <strong>duas embreagens</strong>: uma cuida das marchas ímpares e a outra das pares. Enquanto uma marcha trabalha, a próxima já fica <strong>pré-selecionada</strong>, e a troca acontece em frações de segundo.</p>
+              <ul class="type-facts">
+                <li><b>Como troca:</b> uma embreagem solta enquanto a outra acopla. Trocas rapidíssimas.</li>
+                <li><b>Cuidado-chave:</b> evite "segurar" o carro na subida só com o acelerador. Isso aquece e desgasta as embreagens.</li>
+              </ul>
+              <p class="type-readout" id="dctReadout">Marcha <b>1</b> engatada · <b>2ª</b> pré-selecionada</p>
+            </div>
+            <div class="type-visual"><svg id="typeDct" viewBox="0 0 360 240" aria-hidden="true"></svg></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRÉ-DIAGNÓSTICO -->
+    <section class="section section-alt" id="diagnostico" aria-labelledby="diag-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">Pré-diagnóstico online</span>
+          <h2 id="diag-title" class="section-title">O que seu câmbio <span class="text-red">está tentando te dizer?</span></h2>
+          <p class="section-sub">Marque o que você sente no carro. Em segundos você recebe uma orientação inicial e já manda tudo para o especialista pelo WhatsApp.</p>
+        </header>
+
+        <div class="diag reveal">
+          <form class="diag-form glass" id="diagForm" novalidate>
+            <fieldset>
+              <legend><span class="step">1</span> O que está acontecendo?</legend>
+              <div class="chips" id="diagChips">
+                <label class="chip"><input type="checkbox" name="s" value="tranco"><span>Trancos nas trocas</span></label>
+                <label class="chip"><input type="checkbox" name="s" value="patina"><span>Patina / giro sobe e não anda</span></label>
+                <label class="chip"><input type="checkbox" name="s" value="demora"><span>Demora para engatar D ou R</span></label>
+                <label class="chip"><input type="checkbox" name="s" value="luz"><span>Luz de falha no painel</span></label>
+                <label class="chip"><input type="checkbox" name="s" value="emergencia"><span>Preso em uma marcha / modo de emergência</span></label>
+                <label class="chip"><input type="checkbox" name="s" value="trepida"><span>Trepidação</span></label>
+                <label class="chip"><input type="checkbox" name="s" value="ruido"><span>Ruído ou zumbido</span></label>
+                <label class="chip"><input type="checkbox" name="s" value="vazamento"><span>Vazamento de óleo</span></label>
+                <label class="chip"><input type="checkbox" name="s" value="queimado"><span>Cheiro de queimado</span></label>
+                <label class="chip"><input type="checkbox" name="s" value="naoanda"><span>Não engata / carro não anda</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend><span class="step">2</span> Qual é o carro?</legend>
+              <div class="fields">
+                <label class="field"><span>Marca e modelo</span><input type="text" id="diagCar" placeholder="Ex.: Toyota Corolla" autocomplete="off"></label>
+                <label class="field field-sm"><span>Ano</span><input type="text" id="diagYear" inputmode="numeric" maxlength="4" placeholder="2018" autocomplete="off"></label>
+                <label class="field field-sm"><span>Km (aprox.)</span><input type="text" id="diagKm" inputmode="numeric" placeholder="90.000" autocomplete="off"></label>
+              </div>
+            </fieldset>
+          </form>
+
+          <div class="diag-result glass" id="diagResult" aria-live="polite">
+            <div class="meter" id="diagMeter" data-level="0">
+              <svg viewBox="0 0 200 110" aria-hidden="true">
+                <path class="meter-track" d="M 15 100 A 85 85 0 0 1 185 100"/>
+                <path class="meter-fill" id="meterFill" d="M 15 100 A 85 85 0 0 1 185 100" pathLength="100"/>
+              </svg>
+              <div class="meter-label">
+                <span id="diagLevel">Aguardando</span>
+                <small>nível de atenção</small>
+              </div>
+            </div>
+            <p class="diag-text" id="diagText">Marque pelo menos um sintoma para ver a orientação.</p>
+            <div class="diag-areas" id="diagAreasWrap" hidden>
+              <h4>Pontos que costumam estar envolvidos</h4>
+              <ul id="diagAreas"></ul>
+            </div>
+            <a href="https://wa.me/5511998249580" class="btn btn-primary diag-cta is-disabled" id="diagCta" target="_blank" rel="noopener" aria-disabled="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"/></svg>
+              Enviar para o especialista
+            </a>
+            <p class="diag-disclaimer">Orientação inicial, não substitui a avaliação. O diagnóstico de verdade é feito com o carro na oficina.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MITOS -->
+    <section class="section" id="mitos" aria-labelledby="mitos-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">Mito ou verdade?</span>
+          <h2 id="mitos-title" class="section-title">Hábitos que <span class="text-red">aposentam um câmbio</span> antes da hora</h2>
+          <p class="section-sub">Toque no card para ver a resposta.</p>
+        </header>
+
+        <div class="myths">
+          <button type="button" class="myth reveal" style="--d:0ms" aria-pressed="false">
+            <span class="myth-inner">
+              <span class="myth-face myth-front"><em>Mito ou verdade?</em><strong>"Colocar em N no semáforo poupa o câmbio."</strong><span class="myth-hint">Toque para ver ↻</span></span>
+              <span class="myth-face myth-back"><em class="tag-myth">Mito</em><span>Fique em <b>D com o pé no freio</b>. Ficar alternando entre D e N a cada parada só aumenta os engates e o desgaste.</span></span>
+            </span>
+          </button>
+          <button type="button" class="myth reveal" style="--d:100ms" aria-pressed="false">
+            <span class="myth-inner">
+              <span class="myth-face myth-front"><em>Mito ou verdade?</em><strong>"Descer a serra em N economiza combustível."</strong><span class="myth-hint">Toque para ver ↻</span></span>
+              <span class="myth-face myth-back"><em class="tag-myth">Mito</em><span>Engrenado, a injeção corta o combustível na descida. Em N o motor gasta para ficar em marcha lenta, e você <b>perde o freio-motor</b>. É mais perigoso.</span></span>
+            </span>
+          </button>
+          <button type="button" class="myth reveal" style="--d:200ms" aria-pressed="false">
+            <span class="myth-inner">
+              <span class="myth-face myth-front"><em>Mito ou verdade?</em><strong>"O óleo do câmbio automático dura para sempre."</strong><span class="myth-hint">Toque para ver ↻</span></span>
+              <span class="myth-face myth-back"><em class="tag-myth">Mito</em><span>O óleo envelhece com calor e uso. Siga o manual e <b>antecipe a troca em uso severo</b>: trânsito pesado, reboque, calor.</span></span>
+            </span>
+          </button>
+          <button type="button" class="myth reveal" style="--d:0ms" aria-pressed="false">
+            <span class="myth-inner">
+              <span class="myth-face myth-front"><em>Mito ou verdade?</em><strong>"Na ladeira, puxe o freio de mão antes de engatar o P."</strong><span class="myth-hint">Toque para ver ↻</span></span>
+              <span class="myth-face myth-back"><em class="tag-ok">Verdade</em><span>Assim o peso do carro fica no freio, e não só na <b>trava de estacionamento</b>, um pino que pode quebrar ou deixar a alavanca presa.</span></span>
+            </span>
+          </button>
+          <button type="button" class="myth reveal" style="--d:100ms" aria-pressed="false">
+            <span class="myth-inner">
+              <span class="myth-face myth-front"><em>Mito ou verdade?</em><strong>"Automático pode ser rebocado com as rodas no chão."</strong><span class="myth-hint">Toque para ver ↻</span></span>
+              <span class="myth-face myth-back"><em class="tag-myth">Mito</em><span>Com o motor desligado, a bomba de óleo não lubrifica o câmbio. Use <b>guincho plataforma</b> e confira o manual do seu carro.</span></span>
+            </span>
+          </button>
+          <button type="button" class="myth reveal" style="--d:200ms" aria-pressed="false">
+            <span class="myth-inner">
+              <span class="myth-face myth-front"><em>Mito ou verdade?</em><strong>"Um tranco leve é normal, pode esperar."</strong><span class="myth-hint">Toque para ver ↻</span></span>
+              <span class="myth-face myth-back"><em class="tag-myth">Mito</em><span>Tranco é aviso. Avaliado no começo, o problema costuma ser <b>bem menor e mais barato</b> do que depois que o câmbio para.</span></span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE / COMO TRABALHAMOS -->
     <section class="section section-alt" id="sobre" aria-labelledby="sobre-title">
       <div class="container about-grid">
         <div class="about-media reveal-left">
@@ -159,120 +595,26 @@
         </div>
 
         <div class="about-content reveal-right">
-          <span class="section-tag">Sobre nós</span>
-          <h2 id="sobre-title" class="section-title">Só câmbio automático. <span class="text-red">E é isso que fazemos melhor.</span></h2>
+          <span class="section-tag">Sobre a Mecfupi</span>
+          <h2 id="sobre-title" class="section-title">Só câmbio automático. <span class="text-red">De propósito.</span></h2>
           <p>
-            A <strong>Mecfupi do Brasil</strong> é uma oficina especializada exclusivamente em <strong>câmbios automáticos</strong>.
-            Não fazemos mecânica geral e não trabalhamos com câmbio manual: todo o nosso conhecimento e estrutura estão voltados
-            para a mão de obra em transmissões automáticas.
-          </p>
-          <p>
-            Atendemos veículos de <strong>todas as montadoras e todas as linhas</strong>, do diagnóstico à retífica completa,
-            no Imirim, Zona Norte de São Paulo.
+            A <strong>Mecfupi do Brasil</strong> é especializada exclusivamente em <strong>mão de obra de câmbios automáticos</strong>.
+            Não fazemos mecânica geral e não mexemos em câmbio manual: toda a nossa experiência está concentrada em transmissões automáticas
+            de <strong>todas as montadoras e todas as linhas</strong>.
           </p>
 
-          <ul class="features">
-            <li class="feature glass reveal" style="--d:100ms">
-              <span class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-target"/></svg></span>
-              <div><h3>Especialização total</h3><p>Trabalhamos só com câmbio automático, nada além disso.</p></div>
-            </li>
-            <li class="feature glass reveal" style="--d:200ms">
-              <span class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-car"/></svg></span>
-              <div><h3>Todas as montadoras</h3><p>Nacionais e importados, de todas as linhas.</p></div>
-            </li>
-            <li class="feature glass reveal" style="--d:300ms">
-              <span class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-scan"/></svg></span>
-              <div><h3>Diagnóstico preciso</h3><p>Identificamos a causa real antes de mexer no câmbio.</p></div>
-            </li>
-            <li class="feature glass reveal" style="--d:400ms">
-              <span class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-wrench"/></svg></span>
-              <div><h3>Mão de obra especializada</h3><p>Prestação de serviço feita por quem entende de transmissão.</p></div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVIÇOS -->
-    <section class="section" id="servicos" aria-labelledby="servicos-title">
-      <div class="container">
-        <header class="section-head reveal">
-          <span class="section-tag">Serviços</span>
-          <h2 id="servicos-title" class="section-title">Mão de obra especializada em câmbio automático</h2>
-          <p class="section-sub">Do primeiro sintoma à retífica completa, cuidamos de todo o câmbio automático do seu veículo.</p>
-        </header>
-
-        <div class="products-grid">
-          <article class="product-card glass reveal" style="--d:0ms">
-            <div class="product-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-scan"/></svg></div>
-            <h3>Diagnóstico</h3>
-            <p>Leitura de falhas por scanner, análise de pressões e teste de rodagem para encontrar a origem do problema.</p>
-            <a href="https://wa.me/5511998249580?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20DIAGN%C3%93STICO%20do%20c%C3%A2mbio%20autom%C3%A1tico." target="_blank" rel="noopener" class="card-link" aria-label="Agendar diagnóstico pelo WhatsApp">Agendar <span aria-hidden="true">→</span></a>
-          </article>
-
-          <article class="product-card glass reveal" style="--d:100ms">
-            <div class="product-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-gear"/></svg></div>
-            <h3>Retífica de câmbio</h3>
-            <p>Desmontagem, revisão completa e remontagem do câmbio automático, devolvendo o funcionamento original.</p>
-            <a href="https://wa.me/5511998249580?text=Ol%C3%A1!%20Preciso%20de%20or%C3%A7amento%20para%20RET%C3%8DFICA%20de%20c%C3%A2mbio%20autom%C3%A1tico." target="_blank" rel="noopener" class="card-link" aria-label="Pedir orçamento de retífica pelo WhatsApp">Orçamento <span aria-hidden="true">→</span></a>
-          </article>
-
-          <article class="product-card glass reveal" style="--d:200ms">
-            <div class="product-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-drop"/></svg></div>
-            <h3>Troca de óleo do câmbio</h3>
-            <p>Troca do fluido ATF conforme a especificação de cada montadora, essencial para a vida útil do câmbio.</p>
-            <a href="https://wa.me/5511998249580?text=Ol%C3%A1!%20Quero%20fazer%20a%20TROCA%20DE%20%C3%93LEO%20do%20c%C3%A2mbio%20autom%C3%A1tico." target="_blank" rel="noopener" class="card-link" aria-label="Agendar troca de óleo do câmbio pelo WhatsApp">Agendar <span aria-hidden="true">→</span></a>
-          </article>
-
-          <article class="product-card glass reveal" style="--d:0ms">
-            <div class="product-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-circuit"/></svg></div>
-            <h3>Corpo de válvulas</h3>
-            <p>Reparo e limpeza do corpo de válvulas e solenoides, causa comum de trancos e trocas de marcha irregulares.</p>
-            <a href="https://wa.me/5511998249580?text=Ol%C3%A1!%20Meu%20c%C3%A2mbio%20autom%C3%A1tico%20est%C3%A1%20dando%20trancos." target="_blank" rel="noopener" class="card-link" aria-label="Falar sobre corpo de válvulas pelo WhatsApp">Consultar <span aria-hidden="true">→</span></a>
-          </article>
-
-          <article class="product-card glass reveal" style="--d:100ms">
-            <div class="product-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-fan"/></svg></div>
-            <h3>Conversor de torque</h3>
-            <p>Diagnóstico e reparo de trepidação, patinação e superaquecimento ligados ao conversor de torque.</p>
-            <a href="https://wa.me/5511998249580?text=Ol%C3%A1!%20Meu%20carro%20autom%C3%A1tico%20est%C3%A1%20trepidando%20ou%20patinando." target="_blank" rel="noopener" class="card-link" aria-label="Falar sobre conversor de torque pelo WhatsApp">Consultar <span aria-hidden="true">→</span></a>
-          </article>
-
-          <article class="product-card glass reveal" style="--d:200ms">
-            <div class="product-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-car"/></svg></div>
-            <h3>Todas as linhas</h3>
-            <p>Automáticos convencionais, CVT e dupla embreagem, em veículos nacionais e importados de todas as montadoras.</p>
-            <a href="https://wa.me/5511998249580?text=Ol%C3%A1!%20Voc%C3%AAs%20atendem%20o%20c%C3%A2mbio%20autom%C3%A1tico%20do%20meu%20carro%3F" target="_blank" rel="noopener" class="card-link" aria-label="Consultar se atendemos seu veículo pelo WhatsApp">Consultar meu carro <span aria-hidden="true">→</span></a>
-          </article>
-        </div>
-
-        <!-- Sintomas -->
-        <div class="symptoms glass reveal">
-          <div class="symptoms-head">
-            <span class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-alert"/></svg></span>
-            <div>
-              <h3>Seu câmbio automático está dando sinais?</h3>
-              <p>Quanto antes o problema é avaliado, menor tende a ser o reparo.</p>
-            </div>
-          </div>
-          <ul class="symptoms-list">
-            <li>Trancos nas trocas de marcha</li>
-            <li>Câmbio patinando ou giro subindo sem o carro andar</li>
-            <li>Demora para engatar D ou R</li>
-            <li>Luz de falha acesa no painel</li>
-            <li>Carro entrando em modo de emergência</li>
-            <li>Vazamento ou cheiro de óleo queimado</li>
-          </ul>
-          <a href="https://wa.me/5511998249580?text=Ol%C3%A1!%20Meu%20c%C3%A2mbio%20autom%C3%A1tico%20est%C3%A1%20apresentando%20um%20problema." class="btn btn-primary" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"/></svg>
-            Descrever o problema no WhatsApp
-          </a>
+          <ol class="steps">
+            <li class="reveal" style="--d:80ms"><span>01</span><div><h3>Você chama no WhatsApp</h3><p>Conta o que o carro está fazendo, com marca, modelo e ano.</p></div></li>
+            <li class="reveal" style="--d:160ms"><span>02</span><div><h3>Avaliação e diagnóstico</h3><p>Testamos o câmbio para encontrar a causa, não só o sintoma.</p></div></li>
+            <li class="reveal" style="--d:240ms"><span>03</span><div><h3>Orçamento para aprovação</h3><p>Você entende o que precisa ser feito antes de qualquer serviço.</p></div></li>
+            <li class="reveal" style="--d:320ms"><span>04</span><div><h3>Serviço e teste de rodagem</h3><p>O carro só é liberado depois de testado na rua.</p></div></li>
+          </ol>
         </div>
       </div>
     </section>
 
     <!-- GALERIA -->
-    <section class="section section-alt" id="galeria" aria-labelledby="galeria-title">
+    <section class="section" id="galeria" aria-labelledby="galeria-title">
       <div class="container">
         <header class="section-head reveal">
           <span class="section-tag">Galeria</span>
@@ -310,7 +652,7 @@
     </section>
 
     <!-- LOCALIZAÇÃO -->
-    <section class="section" id="localizacao" aria-labelledby="local-title">
+    <section class="section section-alt" id="localizacao" aria-labelledby="local-title">
       <div class="container">
         <header class="section-head reveal">
           <span class="section-tag">Localização</span>
@@ -363,8 +705,8 @@
     <section class="cta-band" aria-labelledby="cta-title">
       <div class="container cta-inner reveal">
         <div>
-          <h2 id="cta-title">Problema no câmbio automático?</h2>
-          <p>Mande a marca, o modelo, o ano e o que o carro está apresentando. A gente responde rapidinho.</p>
+          <h2 id="cta-title">Câmbio dando sinal? Não espera ele parar.</h2>
+          <p>Mande a marca, o modelo, o ano e o que o carro está fazendo. A gente responde rapidinho.</p>
         </div>
         <a href="https://wa.me/5511998249580?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20preciso%20de%20um%20or%C3%A7amento%20para%20c%C3%A2mbio%20autom%C3%A1tico." class="btn btn-light btn-lg" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"/></svg>
@@ -406,9 +748,10 @@
       <div class="footer-col reveal" style="--d:300ms">
         <h2>Navegação</h2>
         <ul>
-          <li><a href="#sobre">Sobre</a></li>
           <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#raio-x">Raio-X do câmbio</a></li>
+          <li><a href="#diagnostico">Pré-diagnóstico</a></li>
+          <li><a href="#mitos">Mitos e verdades</a></li>
           <li><a href="#localizacao">Localização</a></li>
         </ul>
       </div>
@@ -435,15 +778,14 @@
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <symbol id="icon-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.81 11.81 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.31-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.49-8.41"/></symbol>
     <symbol id="icon-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-    <symbol id="icon-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></symbol>
     <symbol id="icon-car" viewBox="0 0 24 24"><path d="M3 15.5V12l2-5.5A2 2 0 0 1 6.9 5h10.2a2 2 0 0 1 1.9 1.5L21 12v3.5a1 1 0 0 1-1 1h-1.5M5.5 16.5H4a1 1 0 0 1-1-1M3 12h18M8.5 16.5h7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7" cy="16.5" r="1.8" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17" cy="16.5" r="1.8" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
     <symbol id="icon-scan" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M6 12l2.5-3 2.5 2 3-4 3 3M9 20h6M12 16v4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-    <symbol id="icon-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a4.5 4.5 0 0 0 5.9 5.9L21 12a5.5 5.5 0 0 1-7.3 2.4L6.4 21.7a2 2 0 0 1-2.8-2.8l7.3-7.3A5.5 5.5 0 0 1 13.3 4.3L12 5.6l1 2.4 2.4 1z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
     <symbol id="icon-gear" viewBox="0 0 24 24"><path d="M10.6 2h2.8l.4 2.3c.7.2 1.3.5 1.9.8l1.9-1.3 2 2-1.3 1.9c.3.6.6 1.2.8 1.9l2.3.4v2.8l-2.3.4c-.2.7-.5 1.3-.8 1.9l1.3 1.9-2 2-1.9-1.3c-.6.3-1.2.6-1.9.8l-.4 2.3h-2.8l-.4-2.3c-.7-.2-1.3-.5-1.9-.8l-1.9 1.3-2-2 1.3-1.9c-.3-.6-.6-1.2-.8-1.9L2 13.4v-2.8l2.3-.4c.2-.7.5-1.3.8-1.9L3.8 6.4l2-2 1.9 1.3c.6-.3 1.2-.6 1.9-.8z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
     <symbol id="icon-drop" viewBox="0 0 24 24"><path d="M12 3s6.5 7.2 6.5 11.5a6.5 6.5 0 0 1-13 0C5.5 10.2 12 3 12 3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 15a3 3 0 0 0 3 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
     <symbol id="icon-circuit" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="9.5" y="9.5" width="5" height="5" rx="1" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
     <symbol id="icon-fan" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 10c0-3 1-5 3.5-5.5M14 12c3 0 5 1 5.5 3.5M12 14c0 3-1 5-3.5 5.5M10 12c-3 0-5-1-5.5-3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
-    <symbol id="icon-alert" viewBox="0 0 24 24"><path d="M12 3l9.5 17h-19zM12 10v4.5M12 17.5h.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="icon-gauge" viewBox="0 0 24 24"><path d="M4 18a8 8 0 1 1 16 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 18l4.5-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
     <symbol id="icon-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
     <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M5 3h3.5l1.5 5-2.2 1.5a11 11 0 0 0 6.7 6.7L16 14l5 1.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
     <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3.5 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
