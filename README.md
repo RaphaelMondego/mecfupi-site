@@ -1,6 +1,6 @@
 # Mecfupi do Brasil — Site institucional
 
-Site de página única da **Mecfupi do Brasil**, loja de peças e acessórios novos para veículos automotores no Imirim, São Paulo.
+Site de página única da **Mecfupi do Brasil**, oficina especializada exclusivamente em **câmbio automático** (somente mão de obra / prestação de serviço), para todas as montadoras e linhas, no Imirim, São Paulo.
 
 🔗 **Site no ar:** https://raphaelmondego.github.io/mecfupi-site/
 
@@ -21,7 +21,7 @@ HTML, CSS e JavaScript puros: sem frameworks, sem build, sem dependências.
 - Navbar fixa que ganha fundo com blur ao rolar, menu hambúrguer no mobile
 - Botão "voltar ao topo" e botão flutuante de WhatsApp
 - Glassmorphism, gradientes e efeitos de hover
-- Mobile-first, `loading="lazy"` nas imagens, SEO, Open Graph e dados estruturados (Schema.org `AutoPartsStore`)
+- Mobile-first, `loading="lazy"` nas imagens, SEO, Open Graph e dados estruturados (Schema.org `AutoRepair`)
 - Respeita `prefers-reduced-motion`
 
 ## Estrutura
@@ -31,6 +31,7 @@ mecfupi-site/
 ├── index.html
 ├── css/
 │   └── style.css
+├── img/
 ├── js/
 │   └── main.js
 └── README.md
@@ -56,4 +57,4 @@ python -m http.server 8000
 
 - **Horário de funcionamento:** `index.html` (seções Localização e Footer) e o bloco JSON-LD no `<head>`
 - **Cores:** variáveis no topo de `css/style.css` (`--red`, `--bg`, `--metal`, `--white`)
-- **Imagens:** URLs do Unsplash em `index.html` e no fundo do hero em `css/style.css` (`.hero-bg`)
+- **Imagens:** pasta `img/` (fotos de câmbios automáticos do Wikimedia Commons; créditos no rodapé do site)
