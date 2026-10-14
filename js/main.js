@@ -810,11 +810,62 @@
     });
   }
 
+  /* =========================================================
+     Abertura animada
+     ========================================================= */
+  function initIntro(done) {
+    var root = document.documentElement, intro = document.getElementById("intro");
+    if (!intro || !root.classList.contains("intro-on")) { done(); return; }
+    var rpm = document.getElementById("introRpm"), finished = false;
+
+    var called = false;
+    function once() { if (!called) { called = true; done(); } }
+    // as animações do hero começam enquanto a tela se abre (2,2 s)
+    var doneTimer = setTimeout(once, 2300);
+    var endTimer = setTimeout(function () { finish(0); }, 2950);
+
+    function finish(delay) {
+      if (finished) return;
+      finished = true;
+      clearTimeout(endTimer);
+      try { sessionStorage.setItem("mecfupi-intro", "1"); } catch (e) { /* ignora */ }
+      setTimeout(function () {
+        root.classList.remove("intro-on");
+        if (intro.parentNode) intro.parentNode.removeChild(intro);
+      }, delay);
+      if (!called) { clearTimeout(doneTimer); setTimeout(once, Math.max(0, delay - 300)); }
+    }
+    function skip() {
+      if (finished) return;
+      intro.classList.add("intro-leave");
+      finish(550);
+    }
+
+    // conta-giros: acompanha a barra animada em CSS (marcha lenta até o D, depois dispara)
+    var bar = intro.querySelector(".intro-rev span");
+    (function tick(now) {
+      if (finished) return;
+      var m = getComputedStyle(bar).transform, sx = 0.11;
+      if (m && m !== "none") sx = parseFloat(m.slice(7)) || sx;
+      var v = sx <= 0.115 ? 800 + Math.sin(now / 110) * 40 : 800 + 6200 * (sx - 0.11) / 0.89;
+      rpm.textContent = fmt(Math.round(v / 50) * 50);
+      requestAnimationFrame(tick);
+    })(performance.now());
+
+    intro.addEventListener("click", skip);
+    document.getElementById("introSkip").addEventListener("click", skip);
+    document.addEventListener("keydown", function onKey(e) {
+      if (e.key === "Escape" || e.key === "Enter" || e.key === " ") { skip(); document.removeEventListener("keydown", onKey); }
+    });
+  }
+
   function init() {
-    var steps = [initSimulator, initXray, initTypes, initDiagnosis, initMyths, initParticles, initScroll, initMenu, initSmoothScroll, initActiveLink, initReveal, initCardGlow];
+    var steps = [initSimulator, initXray, initTypes, initDiagnosis, initMyths, initParticles, initScroll, initMenu, initSmoothScroll, initActiveLink, initCardGlow];
     steps.forEach(function (fn) {
       try { fn(); } catch (err) { if (window.console) console.error("[mecfupi]", fn.name, err); }
     });
+    // as animações de entrada do hero esperam a abertura terminar
+    try { initIntro(initReveal); } catch (err) { initReveal(); }
     var year = document.getElementById("year");
     if (year) year.textContent = new Date().getFullYear();
   }

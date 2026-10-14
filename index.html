@@ -34,6 +34,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800;900&family=Barlow+Condensed:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script>
+    /* abertura: 1x por sessão; ?intro=1 força; não roda com movimento reduzido */
+    (function () {
+      try {
+        var force = /[?&]intro=1/.test(location.search);
+        var seen = sessionStorage.getItem("mecfupi-intro");
+        var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (force || (!seen && !reduce)) document.documentElement.classList.add("intro-on");
+      } catch (e) { /* sem sessionStorage: segue sem abertura */ }
+    })();
+  </script>
   <link rel="stylesheet" href="css/style.css">
 
   <script type="application/ld+json">
@@ -61,6 +72,20 @@
   </script>
 </head>
 <body>
+  <!-- Abertura animada -->
+  <div class="intro" id="intro" aria-hidden="true">
+    <div class="intro-half intro-top"></div>
+    <div class="intro-half intro-bottom"></div>
+    <div class="intro-laser"></div>
+    <div class="intro-core">
+      <svg class="intro-gear" viewBox="0 0 24 24"><path fill="currentColor" d="M10.6 1h2.8l.5 2.6a8.4 8.4 0 0 1 2.2.9l2.2-1.5 2 2-1.5 2.2c.4.7.7 1.4.9 2.2l2.6.5v2.8l-2.6.5a8.4 8.4 0 0 1-.9 2.2l1.5 2.2-2 2-2.2-1.5a8.4 8.4 0 0 1-2.2.9l-.5 2.6h-2.8l-.5-2.6a8.4 8.4 0 0 1-2.2-.9L5.6 21l-2-2 1.5-2.2a8.4 8.4 0 0 1-.9-2.2L1.6 14v-2.8l2.6-.5c.2-.8.5-1.5.9-2.2L3.6 6.3l2-2 2.2 1.5c.7-.4 1.4-.7 2.2-.9zM12 8.2a3.8 3.8 0 1 0 0 7.6 3.8 3.8 0 0 0 0-7.6z"/></svg>
+      <div class="intro-brand">MECFUPI<small>Câmbio Automático</small></div>
+      <ol class="intro-gears"><li>P</li><li>R</li><li>N</li><li>D</li></ol>
+      <div class="intro-rev"><span></span></div>
+      <div class="intro-rpm"><b id="introRpm">800</b> rpm</div>
+    </div>
+    <button type="button" class="intro-skip" id="introSkip" tabindex="-1">Pular ›</button>
+  </div>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
   <!-- Barra de progresso de scroll -->

@@ -841,3 +841,106 @@ body.menu-open { overflow: hidden; }
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
   .reveal, .reveal-left, .reveal-right { opacity: 1; transform: none; }
 }
+
+/* =========================================================
+   Abertura animada (P → R → N → D → a tela se abre)
+   ========================================================= */
+.intro { display: none; }
+html.intro-on .intro {
+  display: flex; position: fixed; inset: 0; z-index: 2000;
+  align-items: center; justify-content: center;
+  /* se o JS falhar, some sozinha */
+  animation: introGone 0s linear 3.4s forwards;
+}
+@keyframes introGone { to { visibility: hidden; pointer-events: none; } }
+
+.intro-half {
+  position: absolute; left: 0; right: 0; height: 50.2%;
+  background:
+    linear-gradient(rgba(255, 255, 255, .025) 1px, transparent 1px) 0 0 / 48px 48px,
+    linear-gradient(90deg, rgba(255, 255, 255, .025) 1px, transparent 1px) 0 0 / 48px 48px,
+    #07070b;
+  will-change: transform;
+}
+.intro-top { top: 0; animation: introTop .75s cubic-bezier(.7, 0, .2, 1) 2.2s forwards; box-shadow: 0 1px 0 rgba(230, 57, 70, .25); }
+.intro-bottom { bottom: 0; animation: introBottom .75s cubic-bezier(.7, 0, .2, 1) 2.2s forwards; }
+@keyframes introTop { to { transform: translateY(-101%); } }
+@keyframes introBottom { to { transform: translateY(101%); } }
+
+.intro-laser {
+  position: absolute; left: 0; right: 0; top: 50%; height: 3px; margin-top: -1.5px; z-index: 2;
+  background: linear-gradient(90deg, transparent, #ff6b75 20%, #fff 50%, #ff6b75 80%, transparent);
+  box-shadow: 0 0 24px 4px rgba(230, 57, 70, .8);
+  transform: scaleX(0); opacity: 0;
+  animation: laserIn .4s cubic-bezier(.2, .8, .2, 1) 1.95s forwards, laserOut .35s ease-in 2.3s forwards;
+}
+@keyframes laserIn { to { transform: scaleX(1); opacity: 1; } }
+@keyframes laserOut { to { opacity: 0; transform: scaleX(1) scaleY(6); } }
+
+.intro::after {
+  content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: radial-gradient(circle at 50% 50%, rgba(230, 57, 70, .45), transparent 55%);
+  opacity: 0; animation: introFlash .6s ease-out 1.85s;
+}
+@keyframes introFlash { 30% { opacity: 1; } 100% { opacity: 0; } }
+
+.intro-core {
+  position: relative; z-index: 3;
+  display: flex; flex-direction: column; align-items: center; gap: 20px;
+  animation: coreOut .35s cubic-bezier(.6, 0, .8, .2) 2s forwards;
+}
+@keyframes coreOut { to { opacity: 0; transform: scale(1.15); filter: blur(6px); } }
+
+.intro-gear {
+  width: 76px; height: 76px; color: var(--red);
+  filter: drop-shadow(0 0 22px rgba(230, 57, 70, .6));
+  animation: introIn .5s var(--ease) both, introSpin 2.2s cubic-bezier(.55, 0, .25, 1) forwards;
+}
+@keyframes introSpin { to { transform: rotate(1080deg); } }
+@keyframes introIn { from { opacity: 0; transform: scale(.6); } }
+
+.intro-brand {
+  display: flex; flex-direction: column; align-items: center;
+  font-family: var(--font-title); font-weight: 900; font-size: clamp(2.2rem, 9vw, 3.4rem); letter-spacing: .22em; line-height: 1;
+  padding-left: .22em;
+  animation: introIn .6s var(--ease) .15s both;
+}
+.intro-brand small { font-weight: 600; font-size: .26em; letter-spacing: .5em; color: var(--metal); margin-top: 10px; }
+
+.intro-gears { display: flex; gap: 10px; animation: introIn .5s var(--ease) .3s both; }
+.intro-gears li {
+  width: 46px; height: 46px; border-radius: 10px; display: grid; place-items: center;
+  font-family: var(--font-cond); font-weight: 700; font-size: 1.45rem; color: #4a4a55;
+  border: 1px solid rgba(255, 255, 255, .08); background: #101016;
+}
+.intro-gears li:nth-child(1) { animation: gearBlink .3s steps(1) .5s; }
+.intro-gears li:nth-child(2) { animation: gearBlink .3s steps(1) .8s; }
+.intro-gears li:nth-child(3) { animation: gearBlink .3s steps(1) 1.1s; }
+.intro-gears li:nth-child(4) { animation: gearOn .35s cubic-bezier(.5, 1.8, .4, 1) 1.4s forwards; }
+@keyframes gearBlink { 0%, 100% { color: #fff; background: #2a2a34; border-color: rgba(255, 255, 255, .3); } }
+@keyframes gearOn { to { color: #fff; background: var(--red); border-color: #ff8a93; transform: scale(1.15); box-shadow: 0 0 26px var(--red-glow); } }
+
+.intro-rev { width: min(280px, 70vw); height: 6px; border-radius: 6px; background: #1a1a22; overflow: hidden; animation: introIn .5s var(--ease) .35s both; }
+.intro-rev span {
+  display: block; height: 100%; transform: scaleX(.11); transform-origin: left;
+  background: linear-gradient(90deg, #6d6d79, #f1f1f1 55%, var(--amber) 75%, var(--red));
+  animation: revUp .6s cubic-bezier(.3, 0, .2, 1) 1.4s forwards;
+}
+@keyframes revUp { to { transform: scaleX(1); } }
+.intro-rpm { font-family: var(--font-cond); font-size: .95rem; letter-spacing: .14em; color: var(--metal); margin-top: -8px; animation: introIn .5s var(--ease) .35s both; }
+.intro-rpm b { color: var(--white); font-variant-numeric: tabular-nums; display: inline-block; min-width: 4ch; text-align: right; }
+
+.intro-skip {
+  position: absolute; right: 20px; bottom: 20px; z-index: 4;
+  padding: 8px 14px; border-radius: 999px; font-size: .85rem; color: var(--metal);
+  border: 1px solid rgba(255, 255, 255, .12); background: rgba(255, 255, 255, .04);
+  animation: introIn .4s ease .6s both, coreOut .3s 2s forwards;
+}
+.intro-skip:hover { color: #fff; border-color: var(--red); }
+
+/* Pular: fecha na hora */
+.intro.intro-leave .intro-core,
+.intro.intro-leave .intro-skip,
+.intro.intro-leave .intro-laser { animation: coreOut .2s forwards !important; }
+.intro.intro-leave .intro-top { animation: introTop .5s cubic-bezier(.7, 0, .2, 1) forwards !important; }
+.intro.intro-leave .intro-bottom { animation: introBottom .5s cubic-bezier(.7, 0, .2, 1) forwards !important; }

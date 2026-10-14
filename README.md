@@ -12,6 +12,7 @@ Site de página única da **Mecfupi do Brasil**, oficina especializada exclusiva
 
 ## Destaques
 
+- **Abertura animada:** a alavanca passa por P → R → N → D, o conta-giros dispara e a tela se abre ao meio como a carcaça de um câmbio. Aparece uma vez por sessão (`?intro=1` força), tem botão "Pular" (ou Esc) e não roda com movimento reduzido.
 - **Simulador de câmbio no hero:** alavanca P-R-N-D, conjunto planetário (solar, satélites, coroa) com cinemática real pela equação de Willis, conta-giros, velocímetro e trocas de marcha automáticas ao segurar o acelerador. Abre em modo demonstração e passa o controle ao visitante no primeiro toque. Bloqueia P/R com o carro andando, como um câmbio de verdade.
 - **Raio-X do câmbio:** desenho técnico (blueprint) com 9 pontos clicáveis (conversor, bomba, embreagens, planetários, corpo de válvulas, solenoides, módulo TCM, trava P, óleo ATF), com função e sinais de defeito de cada um
 - **Tipos de câmbio:** abas com animações de automático convencional, CVT (polias variáveis) e dupla embreagem (marchas pré-selecionadas)
