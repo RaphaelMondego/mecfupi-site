@@ -377,6 +377,7 @@ body.menu-open { overflow: hidden; }
 
 .sim-status { margin-top: 10px; min-height: 3.2em; font-size: .88rem; line-height: 1.45; color: #d2d2da; text-align: center; }
 .sim-status.warn { color: var(--amber); }
+.sim-status.hint { color: var(--green); }
 
 .pedal {
   position: relative; overflow: hidden;

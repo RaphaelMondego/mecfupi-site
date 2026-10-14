@@ -152,7 +152,7 @@
     var IDLE = 800, SHIFT_UP = 3200, SHIFT_DOWN = 1150, VMAX = 125, K = 0.09;
     var SWEEP = 108.4; // meia abertura do conta-giros em graus
 
-    var st = { mode: "P", gear: 1, v: 0, rpm: IDLE, throttle: false, S: 0, C: 0, R: 0, P: 0, demo: !reduceMotion, warnUntil: 0, lastKey: "" };
+    var st = { mode: "P", gear: 1, v: 0, rpm: IDLE, throttle: false, S: 0, C: 0, R: 0, P: 0, demo: !reduceMotion, msg: "", msgKind: "", msgUntil: 0, lastKey: "" };
 
     // Conta-giros: marcações e faixa vermelha
     var ticks = document.getElementById("tachTicks");
@@ -188,11 +188,17 @@
       btns.forEach(function (b) { b.setAttribute("aria-checked", String(b.dataset.mode === m)); });
     }
 
+    function showMsg(text, kind) {
+      st.msg = text;
+      st.msgKind = kind || "warn";
+      st.msgUntil = performance.now() + 2800;
+    }
+
     function requestMode(m) {
       if (m === st.mode) return;
       var moving = st.v > 3;
       if (moving && (m === "P" || m === "R" || st.mode === "R")) {
-        st.warnUntil = performance.now() + 2600;
+        showMsg("Atenção: nunca engate P ou R com o carro andando. Pare totalmente antes.");
         shifter.classList.remove("shake"); void shifter.offsetWidth; shifter.classList.add("shake");
         return;
       }
@@ -224,19 +230,36 @@
       st.throttle = on;
       pedal.classList.toggle("is-pressed", on);
     }
+
+    // Acelerador do visitante: em P/N o carro não anda, então engatamos o D e avisamos
+    var pressedAt = 0;
+    function pedalDown() {
+      stopDemo();
+      if ((st.mode === "P" || st.mode === "N") && st.v < 3) {
+        setMode("D");
+        showMsg("Engatamos o D para você. Continue segurando para acelerar!", "hint");
+      }
+      pressedAt = performance.now();
+      press(true);
+    }
+    function pedalUp() {
+      if (st.demo || !st.throttle) return;
+      press(false);
+      if (performance.now() - pressedAt < 350) showMsg("Segure o botão pressionado: quanto mais tempo, mais o carro acelera.", "hint");
+    }
     pedal.addEventListener("pointerdown", function (e) {
-      stopDemo(); press(true);
+      pedalDown();
       try { pedal.setPointerCapture(e.pointerId); } catch (err) { /* ignora */ }
     });
     ["pointerup", "pointercancel", "lostpointercapture"].forEach(function (ev) {
-      pedal.addEventListener(ev, function () { if (!st.demo) press(false); });
+      pedal.addEventListener(ev, pedalUp);
     });
     pedal.addEventListener("contextmenu", function (e) { e.preventDefault(); });
     pedal.addEventListener("keydown", function (e) {
-      if ((e.key === " " || e.key === "Enter") && !e.repeat) { e.preventDefault(); stopDemo(); press(true); }
+      if ((e.key === " " || e.key === "Enter") && !e.repeat) { e.preventDefault(); pedalDown(); }
     });
     pedal.addEventListener("keyup", function (e) {
-      if (e.key === " " || e.key === "Enter") press(false);
+      if (e.key === " " || e.key === "Enter") pedalUp();
     });
     sim.addEventListener("pointerdown", stopDemo);
 
@@ -302,13 +325,14 @@
       needle.setAttribute("transform", "rotate(" + ang.toFixed(1) + " 100 82)");
 
       var key = st.mode === "D" ? (moving || st.throttle ? "D" + st.gear : "D0") : st.mode;
-      var warn = now < st.warnUntil;
-      var fullKey = key + (warn ? "w" : "");
+      var msg = now < st.msgUntil ? st.msg : "";
+      var fullKey = key + "|" + msg;
       if (fullKey === st.lastKey) return;
       st.lastKey = fullKey;
 
-      elStatus.classList.toggle("warn", warn);
-      elStatus.textContent = warn ? "Atenção: nunca engate P ou R com o carro andando. Pare totalmente antes." : STATUS[key];
+      elStatus.classList.toggle("warn", !!msg && st.msgKind === "warn");
+      elStatus.classList.toggle("hint", !!msg && st.msgKind === "hint");
+      elStatus.textContent = msg || STATUS[key];
 
       var held = "none", lock = "";
       var sun = "girando", carrier = "parado", ring = "livre";
