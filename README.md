@@ -18,7 +18,8 @@ Site de página única da **Mecfupi do Brasil**, oficina especializada exclusiva
 - **Pré-diagnóstico online:** o visitante marca sintomas e informa o carro, recebe um nível de atenção e envia tudo pronto pelo WhatsApp
 - **Mitos x verdades:** cards que viram com cuidados reais de uso do câmbio automático
 - Indicador de marcha que acompanha o scroll, barra de progresso, partículas, glitch, glassmorphism, animações de entrada com IntersectionObserver
-- HTML, CSS e JS puros, sem frameworks e sem build. Mobile-first, SEO, Open Graph, dados estruturados (), acessibilidade e 
+- HTML, CSS e JS puros, sem frameworks e sem build. Mobile-first, SEO, Open Graph, dados estruturados (`AutoRepair`), acessibilidade e `prefers-reduced-motion`
+
 ## Estrutura
 
 ```
